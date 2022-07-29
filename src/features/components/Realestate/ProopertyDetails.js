@@ -1,8 +1,8 @@
 import React from 'react';
-import bedroom from '../../assets/images/bedroom.jpg';
-import LiveCity from '../../assets/images/LiveCity.jpg';
-import LiveCity2 from '../../assets/images/LiveCity2.jpg';
-import '../../assets/styles/common.scss';
+import bedroom from '../../../assets/images/bedroom.jpg';
+import LiveCity from '../../../assets/images/LiveCity.jpg';
+import LiveCity2 from '../../../assets/images/LiveCity2.jpg';
+import '../../../assets/styles/common.scss';
 import '../Realestate/PropertyDetails.scss';
 import { FaBath, FaBed, FaCar } from 'react-icons/fa';
 // import city from '../../assets/images/images(1).jpg';

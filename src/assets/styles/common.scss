@@ -65,6 +65,12 @@ body::-webkit-scrollbar {
     color: red;
 }
 
+.sidebar-scroll{
+    position: fixed;
+    height: 91%;
+    overflow: scroll;
+    width: 100%;
+}
 .sidebar{
     width: 100%;
     min-height: 100vh;
@@ -80,6 +86,7 @@ body::-webkit-scrollbar {
 .sidebar.active{
     left: 0;
 }
+
 .sd-header{
     display: flex;
     align-items: center;

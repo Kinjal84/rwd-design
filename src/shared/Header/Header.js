@@ -110,6 +110,8 @@ const Header = () => {
                     </div>
                     <FaUser className='profile-icon' />
                 </div>
+                
+                <div className='sidebar-scroll'>
                 <div className='services'>
                     <div className='services-list'>
                         {headerLinks.services.map((service) => (
@@ -134,6 +136,7 @@ const Header = () => {
                             {other}
                         </div>
                     ))}
+                </div>
                 </div>
             </div>
         </div>

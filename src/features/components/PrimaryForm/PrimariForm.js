@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from 'react';
-import '../PrimaryForm/PrimaryForm.scss';
+import './PrimaryForm.scss';
 import { useForm } from 'react-hook-form';
 
 export default function Form() {
@@ -282,17 +282,12 @@ export default function Form() {
                                 </label>
                                 <div>
                                     <input
-                                        {...register('email-notification', {
-                                            required: true,
-                                        })}
+                                        {...register('email-notification')}
                                         className='switch'
                                         type='checkbox'
                                         name='email-notification'
                                         defaultChecked
-                                        value={isOff}
-                                        onClick={() => {
-                                            setIsOff(!isOff);
-                                        }}
+                                        
                                     />
                                 </div>
                             </div>
@@ -304,15 +299,12 @@ export default function Form() {
                                 </label>
                                 <div>
                                     <input
-                                        {...register('mobile-notification', {
-                                            required: true,
-                                        })}
+                                        {...register('mobile-notification')}
                                         className='switch'
                                         type='checkbox'
                                         name='mobile-notification'
                                         defaultChecked
-                                        value={isMobile}
-                                        onClick={() => setIsMobile(!isMobile)}
+                                        
                                     />
                                 </div>
                             </div>

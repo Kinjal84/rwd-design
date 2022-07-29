@@ -80,6 +80,8 @@ export default function Form() {
         },
     ];
 
+
+    
     useEffect(() => {
         setIsOff(false);
     }, [isOff]);
@@ -132,8 +134,8 @@ export default function Form() {
                                     'Name is required !'}
                                 {errors.name?.type === 'minLength' &&
                                     'Name should have at list 3 charactor !'}
-                                {errors.name?.type === 'maxLength' &&
-                                    'Name should have at most 30 charactor !'}
+                                {/* {errors.name?.type <= 'maxLength' &&
+                                    'Name should have at most 30 charactor !'} */}
                             </p>
 
                             <input
@@ -150,8 +152,8 @@ export default function Form() {
                                     'Last Name is required !'}
                                 {errors.lname?.type === 'minLength' &&
                                     'Last name should have at list 3 charactor !'}
-                                {errors.lname?.type === 'maxLength' &&
-                                    'Last name should have at most 30 charactor !'}
+                                {/* {errors.lname?.type <= 'maxLength' &&
+                                    'Last name should have at most 30 charactor !'} */}
                             </p>
                             <select
                                 {...register('country', { required: true })}

@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from 'react';
-import './styles/PrimaryForm.scss';
+import '../styles/PrimaryForm.scss';
 import { useForm } from 'react-hook-form';
 
 export default function Form() {

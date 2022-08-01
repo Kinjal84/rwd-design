@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './shared/Header/Header';
-import Property from './features/components/Realestate/ProopertyDetails'
-import PrimariryForm from './features/components/PrimaryForm/PrimariForm';
+import Property from './features/Realestate/components/ProopertyDetails'
+import PrimariryForm from './features/form/component/PrimariForm';
 
 function App() {
     return (

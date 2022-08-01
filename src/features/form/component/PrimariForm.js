@@ -1,11 +1,11 @@
 import { React, useEffect, useState } from 'react';
-import './PrimaryForm.scss';
+import './styles/PrimaryForm.scss';
 import { useForm } from 'react-hook-form';
 
 export default function Form() {
     const [selectedCountry, setSelectedCountry] = useState();
-    const [isOff, setIsOff] = useState(true);
-    const [isMobile, setIsMobile] = useState(true);
+    // const [isOff, setIsOff] = useState(true);
+    // const [isMobile, setIsMobile] = useState(true);
     // const [countryId, setCountryId] = useState(null);
 
     const country = [
@@ -82,10 +82,10 @@ export default function Form() {
 
 
     
-    useEffect(() => {
-        setIsOff(false);
-    }, [isOff]);
-
+    // useEffect(() => {
+    //  setIsOff(false);
+    // }, [isOff]);
+   
     const {
         register,
 
@@ -123,37 +123,35 @@ export default function Form() {
                             <input
                                 placeholder='First Name'
                                 className='form-control'
-                                {...register('name', {
+                                {...register('firstName', {
                                     required: true,
                                     minLength: 3,
                                     maxLength: 30,
                                 })}
                             />
                             <p className='error'>
-                                {errors.name?.type === 'required' &&
+                                {errors.firstName?.type === 'required' &&
                                     'Name is required !'}
-                                {errors.name?.type === 'minLength' &&
+                                {errors.firstName?.type === 'minLength' &&
                                     'Name should have at list 3 charactor !'}
-                                {/* {errors.name?.type <= 'maxLength' &&
-                                    'Name should have at most 30 charactor !'} */}
+                                
                             </p>
 
                             <input
                                 placeholder='Last Name'
                                 className='form-control'
-                                {...register('lname', {
+                                {...register('lastName', {
                                     required: true,
                                     minLength: 3,
                                     maxLength: 30,
                                 })}
                             />
                             <p className='error'>
-                                {errors.lname?.type === 'required' &&
+                                {errors.lastName?.type === 'required' &&
                                     'Last Name is required !'}
-                                {errors.lname?.type === 'minLength' &&
+                                {errors.lastName?.type === 'minLength' &&
                                     'Last name should have at list 3 charactor !'}
-                                {/* {errors.lname?.type <= 'maxLength' &&
-                                    'Last name should have at most 30 charactor !'} */}
+
                             </p>
                             <select
                                 {...register('country', { required: true })}
@@ -282,10 +280,10 @@ export default function Form() {
                                 </label>
                                 <div>
                                     <input
-                                        {...register('email-notification')}
+                                        {...register('emailNotification')}
                                         className='switch'
                                         type='checkbox'
-                                        name='email-notification'
+                                        name='emailNotification'
                                         defaultChecked
                                         
                                     />
@@ -299,10 +297,10 @@ export default function Form() {
                                 </label>
                                 <div>
                                     <input
-                                        {...register('mobile-notification')}
+                                        {...register('mobileNotification')}
                                         className='switch'
                                         type='checkbox'
-                                        name='mobile-notification'
+                                        name='mobileNotification'
                                         defaultChecked
                                         
                                     />

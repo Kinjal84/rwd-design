@@ -291,7 +291,7 @@ export default function Form() {
                             </div>
                             <div className='email-notification'>
                                 <label
-                                    htmlFor='email-notification'
+                                    htmlFor='mobile-notification'
                                     className='toggle-label'>
                                     Send mobile notification
                                 </label>

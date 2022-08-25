@@ -1,0 +1,146 @@
+.main{
+    .header-property{
+        width: 100%;
+        max-width: 1800px;
+        background-color: rgb(197, 199, 206);
+        margin: 0 auto;
+        
+       .header-wrapper{
+    
+        padding: 20px 40px;
+       }
+    }
+    .property-images{
+        .images-wrapper{
+            width: 100%;
+            max-width: 1800px;
+            margin: 0 auto;
+       
+            padding: 20px;
+            display: flex;
+            .property-exterior-design{
+                width: 50%;
+                .exterior-image{
+                    width: 100%;
+                  
+                }
+            }
+            .inner-design-and-other{
+                width: 50%;
+                .flex-wrapper-image{
+                    width: 100%;;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .img12-left{
+                        width: 100%;
+                        display: flex;
+                        .bedroom-img{
+                            width: 100%;
+                            margin: 5px 0px 5px 5px;
+                          
+                           
+                        }
+                        .livingroom-img{
+                            width: 100%;
+                            margin: 5px;
+                        }
+                    }
+                    .img34-left{
+                        width: 100%;
+                        display: flex;
+                        .kitchen-dining-img{
+                            width: 100%;
+                            margin: 0px 5px;
+                        }
+                        .garden-img{
+                            width: 100%;
+                            margin: 0px 5px 0px 0px;
+                        }
+                    }
+                }
+                img{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+    .description-section{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+        padding: 10px 20px;
+        .description-header{
+        padding-bottom: 10px;
+          border-bottom: 1px solid gray;
+        }
+        .address{
+           padding: 25px 0px;
+           font-size: 18px;
+           color: rgb(71, 70, 70);
+        }
+        .bhk-detail{
+            display: flex;
+          
+            
+            .property-small-intro{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 40px 10px 0px;
+                color: rgb(77, 75, 75);
+                font-size: 16px;
+            }
+        }
+        .home-type{
+            padding-top: 20px;
+            padding-bottom: 10px;
+           .property-type{
+            color: black;
+            font-size: 16px;
+        }
+        .type-appartment{
+            color: gray;
+            padding: 10px 0px 0px 22px;
+        }
+            .property-info-icons{
+                color: rgb(77, 75, 75);
+                margin-right: 10px;
+            }
+        }
+        .selling-para{
+            line-height:1.7;
+            margin-top: 30px;
+
+            .selling-title{
+                color: rgb(71, 70, 70);
+            }
+            .para{
+                p{
+                    padding-top: 30px;
+                    color: rgb(71, 70, 70);
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .main{
+        .property-images{
+            .images-wrapper{
+                flex-direction: column;
+                .property-exterior-design{
+                    width: 100%;
+
+                }
+                .inner-design-and-other{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

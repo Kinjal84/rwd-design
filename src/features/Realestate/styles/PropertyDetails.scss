@@ -30,78 +30,100 @@
     width: 100%;
      display: flex;
      justify-content: space-between; 
-     .property-img-details{
-         width: 32%;
-         border: 1px solid lightgray;
-         border-radius: 10px;
-         background-color: white;
-         &:hover{
-            transform: scale(1.07);
-            background-color: rgb(238, 230, 221);
-            // opacity: 0.6;
+    //  .property-img-details{
+    //      width: 32%;
+    //      border: 1px solid lightgray;
+    //      border-radius: 10px;
+    //      background-color: white;
+    //      &:hover{
+    //         transform: scale(1.07);
+    //         background-color: rgb(238, 229, 217);
+    //         // opacity: 0.6;
             
-        }
+    //     }
 
-            img{
-                cursor: pointer;
-                border-radius: 10px 10px 0px 0px;
+    //         img{
+    //             cursor: pointer;
+    //             border-radius: 10px 10px 0px 0px;
+    //             width: 100%;
                 
+    //         }
+    //         // .overlay{
+    //         //     background-color: rgba(255, 255, 255, 0.4);
+    //         //     -webkit-backdrop-filter: blur(5px);
+    //         //     backdrop-filter: blur(5px);
+    //         //     height: fit-content;
+    //         // }
+    //         .property-info{
+    //             line-height: 1.7;
+    //             padding: 10px 15px;
+    //             .property-name{
+    //                 .link{
+    //                     text-decoration: none;
+    //                     color: rgb(235, 106, 47);
+    //                     font-size: 20px;
+    //                     &:hover{
+    //                         color: black;
+    //                     }
+    //                 }
+    //             }
                 
-            }
-            // .overlay{
-            //     background-color: rgba(255, 255, 255, 0.4);
-            //     -webkit-backdrop-filter: blur(5px);
-            //     backdrop-filter: blur(5px);
-            //     height: fit-content;
-            // }
-            .property-info{
-                line-height: 1.7;
-                .property-name{
-                    .link{
-                        text-decoration: none;
-                        color: rgb(235, 106, 47);
-                        font-size: 20px;
-                        &:hover{
-                            color: black;
-                        }
-                    }
-                }
-                
-                .property-address{
+    //             .property-address{
 
-                    color: gray;
-                }
-                .property-info-icons{
-                    color: gray;
-                    margin-right: 5px;
-                }
-                .appartments{
-                    color: gray;
-                    text-align: left;
-                }
-                .property-small-intro{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 10px 10px 10px 0px;
-                }
-            }
-            .bedroom-img{
-                width: 100%;
-                height: 200px;
-            }
+    //                 color: gray;
+    //             }
+    //             .property-info-icons{
+    //                 color: gray;
+    //                 margin-right: 5px;
+    //             }
+    //             .appartments{
+    //                 color: gray;
+    //                 text-align: left;
+    //             }
+    //             .property-small-intro{
+    //                 display: flex;
+    //                 align-items: center;
+    //                 justify-content: center;
+    //                 padding: 10px 10px 10px 0px;
+    //             }
+    //         }
+    //         .bedroom-img{
+    //             width: 100%;
+    //             height: 200px;
+    //         }
          
-        }
+    //     }
     }
     }
 }
 
+@media  screen and (max-width: 1024px) {
+    .hero{
+        .container{
+            .title-and-search{
+                .search{
+                    .search-input{
+                        width: 230px;
+                        padding: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
 
 @media screen and (max-width: 876px) {
     .hero{
         .container{
-            .title{
+            .title-and-search{
                 font-size: 16px !important;
+                display: flex;
+                flex-direction: column;
+                .search{
+                    margin-top: 15px !important;
+                    margin-left: 12px;
+                }
             }
             .card{
                 display: flex;
@@ -117,7 +139,7 @@
 @media screen and (max-width: 606px) {
     .hero{
         .container{
-            .title{
+            .title-and-search{
                 font-size: 16px !important;
             }
             .card{
@@ -136,7 +158,7 @@
 @media screen and (max-width: 768px){
     .hero{
         .container{
-            .title{
+            .title-and-search{
                 font-size: 16px !important;
             }
             .card{
@@ -164,8 +186,15 @@
 @media screen and (max-width: 560px) {
     .hero{
         .container{
-            .title{
+            .title-and-search{
                 font-size: 16px;
+                .search{
+                    margin-left: 0px;
+                    .search-input{
+                        width: 100%;
+                        padding: 10px 15px;
+                    }
+                }
             }
             .card{
                 .property-img-details{

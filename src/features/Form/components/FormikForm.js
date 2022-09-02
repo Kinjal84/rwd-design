@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/PrimaryForm.scss";
 import "../styles/FormikForm.scss"
-import { Formik, Form, Field,  } from "formik";
+import { Formik, Form, Field  } from "formik";
 import * as Yup from "yup";
 // import { useState } from "react";
 
@@ -81,6 +81,7 @@ const Formikform = () => {
 	];
 
     // const availableState = State.filter((c) => c.country_id == selectedCountry);
+// const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 	const ValidationSchema = Yup.object().shape({
 		firstName: Yup.string().min(3, "Too Short!").max(30, "Too Long!").required("First Name is Required!"),
@@ -106,7 +107,7 @@ const Formikform = () => {
                         country: '',
 						email: '',
 						phoneNumber: '',
-                        gender: '',
+                        gender: 'male',
 						state: '',
 						emailNotification: true,
 						mobileNotification: true,
@@ -146,14 +147,8 @@ const Formikform = () => {
 									) : null}
 									<Field
 										name='country'
-										// component='select'
 										className='form-control'
-										as='select'
-										// onChange={(event) => {
-										// 	setFieldValue("country", event.target.value);
-										// 	setSelectedCountry(event.target.value);
-										// }}
-										>
+										as='select'>
 										<option className='placeholder' value=''>
 											Select country
 										</option>
@@ -179,6 +174,7 @@ const Formikform = () => {
 										<div className="error">{errors.email}</div>
 									): null}
 									<Field name="phoneNumber"
+									type='number'
 										className="form-control"
 										placeholder="Phone Number" />
 									{errors.phoneNumber && touched.phoneNumber ? (
@@ -204,7 +200,6 @@ const Formikform = () => {
 											</div>
 										 </div>
 
-
 									</div>
 								</div>
 							
@@ -221,7 +216,7 @@ const Formikform = () => {
                                         Select state
                                     </option>
 									{State.map((state) => {
-										console.log(values.country, "jhdfjkf");
+										
 										if(state.country_id == values.country){
 											return (
 											<option
@@ -249,6 +244,7 @@ const Formikform = () => {
                                         className='switch'
                                         type="checkbox"
                                         name='emailNotification'
+										
                                         
                                     />
 								</div>
@@ -263,6 +259,7 @@ const Formikform = () => {
                                         className='switch'
                                         type="checkbox"
                                         name='mobileNotification'
+										
                                         
                                     />
 

@@ -9,7 +9,7 @@ import { CSSProperties } from 'react';
 import { HashLoader } from 'react-spinners';
 import '../../../assets/styles/common.scss';
 
-const override: CSSProperties = {
+const override = {
     display: "flex",
     alignItems: 'center',
     height: '100vh',

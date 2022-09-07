@@ -1,51 +1,57 @@
-import React, { useState} from 'react';
+import React, { useEffect, useMemo, useState} from 'react';
 
-import { legacy_createStore as createStore } from 'redux';
-import propertyReducer from '../../../redux/reducers/PropertyReducer';
 import '../../../assets/styles/common.scss';
 import '../styles/PropertyDetails.scss';
 import PropertyCard from './PropertyCard';
-// import { searchPlace } from '../../../redux/actions/searchActions';
-// import { useSelector } from 'react-redux';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { store } from '../../../redux/reducers/store';
+import { SyncLoader, PacmanLoader } from 'react-spinners';
 
 const Property = (props) => {
     
-    const [searchInput, setSearchInput] = useState('');
     // const [filteredResults, setFilteredResults] = useState([]);
+    const dispatch = useDispatch();
+    const [isLoading, setIsLoading] = useState(false);
+    const textSelector = useSelector((state) => state);
+    // console.log(textSelector, 'textSelectore')
 
+ 
+    
 
-    const store = createStore(propertyReducer);
+    useEffect(() => {
+        setTimeout(() => {
+            
+            setIsLoading(true);
+        }, 3000);
+        
+    }, [isLoading])
+    
     const propertyDetails = store.getState();
     console.log(propertyDetails, "store");
-  
-    
-    const searchItems = (e) => {
-        // const keyword = e.target.value;
-        const keyword = propertyDetails.initialText = e.target.value;
 
-        setSearchInput(keyword);
-        // searchPlace(keyword);
-        // console.log(searchPlace, "dbsjkdh");
-        // if (keyword !== '') {
-        //     const filteredData = propertyDetails.data.filter((item) => {
+    const searchItems = (e) => {
+       
+            dispatch({type: 'TEXT', payLoad: e.target.value})
+      
+        if (textSelector.name !== '') {
+           textSelector.filter = propertyDetails.data.filter((item) => {
               
-        //         return Object.values(item.title).join('').toLowerCase().includes(keyword.toLowerCase());
+                return Object.values(item.title).join('').toLowerCase().includes(textSelector.name.toLowerCase());
                 
-        //     })
-        //     setFilteredResults(filteredData);
-        //     // console.log(filteredData, "filtered Data")
-        // }    
-        // else{
-        //     setFilteredResults(propertyDetails)
-        // }
-        propertyDetails.inputText = propertyDetails.data.filter((item) => {
-              
-            return Object.values(item.title).join('').toLowerCase().includes(keyword.toLowerCase());
-            
-        })
+            })
+            // setFilteredResults(textSelector.filter);
+            // console.log(textSelector.filter, "filtered Data")
+        }    
+        else{
+            // setFilteredResults(propertyDetails)
+            return '';
+        }
+
+              dispatch({type: 'FILTER', payLoad: textSelector.filter })
+        
     }
-   console.log( propertyDetails.inputText, "filterData");
-    
+  
 
     return (
         <div className='hero'>
@@ -53,13 +59,16 @@ const Property = (props) => {
                 <div className='title-and-search'>
                     <h3>Australia's best investment property deals</h3>
                     <div className='search'>
-                        <input type="text" className='search-input' placeholder="search here..." value={propertyDetails.initialText } onChange={searchItems} />
+                        <input type="text" className='search-input' placeholder="search here..." value={ textSelector.name } onChange={searchItems} />
                         
                     </div>
                 </div>
+                {
+                    !isLoading ? <div className='override'><SyncLoader size={20} color={'orange'}/></div> :
+                
                 <div className='card flex justify--content_space-between'>
-                {propertyDetails.inputText.length >= 1 ? (
-                    propertyDetails.inputText.map((item) => {
+                { textSelector.filter.length >= 1 ? (
+                    textSelector.filter.map((item) => {
                         return (
                             <PropertyCard key={item.id}
                                 id={item.id}
@@ -77,6 +86,7 @@ const Property = (props) => {
                         propertyDetails.data.map((item) => {
                             return (
                                 <PropertyCard 
+                                key={item.id}
                                     id={item.id}
                                     img={item.img}
                                     title={item.title}
@@ -93,6 +103,7 @@ const Property = (props) => {
 
              )} 
                 </div>
+                }
             </div>
         </div>
     );

@@ -14,7 +14,7 @@ const PropertyCard = (props) => {
     return (
         <>
            
-            <div className='property-img-details' key={props.id}>
+            <div className='property-img-details'>
                 <img
                     src={props.img}
                     alt='bedroom'

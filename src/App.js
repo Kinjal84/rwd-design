@@ -8,6 +8,7 @@ import Formikform from './features/Form/components/FormikForm';
 import Main from './features/main/Main';
 import { Route, Routes, useParams } from 'react-router';
 import AboutProperty from './features/AboutProperty/components/AboutProperty';
+import uuid from 'react-uuid';
 
 function App() {
 //     const express = require('express');
@@ -24,9 +25,10 @@ function App() {
 
     return (
         <div>
+            
             <Routes >
                 <Route path="/" element={<Main />} />
-                <Route path="/propertycard/:id" element={<AboutProperty/>} />
+                <Route path="/propertycard/:id" element={<AboutProperty />} />
             </Routes>
         </div>
     );

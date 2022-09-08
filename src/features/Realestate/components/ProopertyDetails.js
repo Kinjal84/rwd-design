@@ -1,25 +1,24 @@
-import React, { useEffect, useMemo, useState} from 'react';
+import React, { useEffect, useState} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+// import { store } from '../../../redux/reducers/store';
+import { SyncLoader } from 'react-spinners';
 
 import '../../../assets/styles/common.scss';
 import '../styles/PropertyDetails.scss';
+
+
 import PropertyCard from './PropertyCard';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { store } from '../../../redux/reducers/store';
-import { SyncLoader, PacmanLoader } from 'react-spinners';
 
 const Property = (props) => {
     
-    
+   
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = useState(false);
     const textSelector = useSelector((state) => state);
-    
-    
-    const propertyDetails = store.getState();
-    console.log(propertyDetails, "store");
- 
-    
+   
+    // const propertyDetails = store.getState();
+   
 
     useEffect(() => {
         setTimeout(() => {
@@ -30,23 +29,9 @@ const Property = (props) => {
     }, [isLoading])
 
     const searchItems = (e) => {
-       
-            dispatch({type: 'TEXT', payLoad: e.target.value})
-      
-        if (textSelector.name !== '') {
-           textSelector.filter = propertyDetails.data.filter((item) => {
-              
-                return Object.values(item.title).join('').toLowerCase().includes(textSelector.name.toLowerCase());
-                
-            })
-            
-        }    
-        else{
-            // setFilteredResults(propertyDetails)
-            return '';
-        }
 
-              dispatch({type: 'FILTER', payLoad: textSelector.filter })
+       textSelector.filter = e.target.value;
+       dispatch({type: 'TEXT', payLoad: e.target.value});
         
     }
   
@@ -65,26 +50,13 @@ const Property = (props) => {
                     !isLoading ? <div className='override'><SyncLoader size={20} color={'orange'}/></div> :
                 
                 <div className='card flex justify--content_space-between'>
-                { textSelector.filter.length >= 1 ? (
-                    textSelector.filter.map((item) => {
-                        return (
-                            <PropertyCard key={item.id}
-                                id={item.id}
-                                img={item.img}
-                                title={item.title}
-                                place={item.place}
-                                price={item.price}
-                                bedcount={item.bedcount}
-                                bath={item.bath}
-                                car={item.car}
-                            />         
-                        )
-                    }))
-                    :(
-                        propertyDetails.data.map((item) => {
+                { textSelector.data.length > 0 && 
+                    textSelector.data.map((item, index) => {
+                     
+                        if(textSelector.filter ? item.title.toLowerCase().includes(textSelector.filter) : true){
+
                             return (
-                                <PropertyCard 
-                                key={item.id}
+                                <PropertyCard key={index}
                                     id={item.id}
                                     img={item.img}
                                     title={item.title}
@@ -93,13 +65,13 @@ const Property = (props) => {
                                     bedcount={item.bedcount}
                                     bath={item.bath}
                                     car={item.car}
-                                 />
+                                />         
                             )
                         }
-                       
-                    )
+                    })
+                
 
-             )} 
+             }
                 </div>
                 }
             </div>

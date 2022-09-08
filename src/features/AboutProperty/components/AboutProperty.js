@@ -3,10 +3,11 @@ import { FaBath, FaBed, FaCar, FaHouzz} from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import { legacy_createStore as createStore } from 'redux';
 import propertyReducer from '../../../redux/reducers/PropertyReducer';
-import uuid from 'react-uuid';
 import { useEffect, useState } from 'react';
-import { CSSProperties } from 'react';
+// import { CSSProperties } from 'react';
 import { HashLoader } from 'react-spinners';
+
+
 import '../../../assets/styles/common.scss';
 
 const override = {
@@ -22,12 +23,12 @@ const override = {
 const AboutProperty = () => {
 
     let { id } = useParams();
-    // console.log(id);
+ 
     const [isLoading, setIsLoading] = useState(true);
     const [filterData, setfilteredData] = useState({});
     const store = createStore(propertyReducer);
     const propertyDetails = store.getState();
-    // console.log(propertyDetails, "store");
+  
     
     useEffect(() => {
         propertyDetails.detailData.map((data) => {
@@ -42,7 +43,7 @@ const AboutProperty = () => {
             
             setIsLoading(true);
         }, 3000);
-        setIsLoading(false)    
+        setIsLoading(false);    
     }, [])
 
 
@@ -51,14 +52,13 @@ const AboutProperty = () => {
         
         {!isLoading ? <div><HashLoader size={70} color={'orange'} cssOverride={override}/></div> : 
         <div className='main aboutPage'>
-                       
-                            <div className='wrapper' key={filterData.id}>
+            <div className='wrapper' key={filterData.id}>
 
-                                <div className="header-property">
-                                    <div className='header-wrapper'>
-                                        <h1>{filterData.title}</h1>
-                                        <p>{filterData.Address}</p>
-                                    </div>
+                <div className="header-property">
+                    <div className='header-wrapper'>
+                        <h1>{filterData.title}</h1>
+                            <p>{filterData.Address}</p>
+                            </div>
                                 </div>
                                 <div className='property-images' >
                                     <div className='images-wrapper'>
@@ -136,10 +136,7 @@ const AboutProperty = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-               
-
-          
+            </div>  
             </div>
             }
         

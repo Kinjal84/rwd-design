@@ -23,12 +23,10 @@ import gardenImg3 from '../../assets/images/Victoria/v-a_albert_ad_1200x550_resi
 
 
 const propertyDetail = 
-    {
-
-            
-
-            data: [
-    
+{
+        name: '',
+        filter: [],
+        data: [
                 {
                     id: 1,
                     title: 'OLEA',
@@ -56,11 +54,9 @@ const propertyDetail =
                     bath: '1-3',
                     car: '1-2',
                     price: 'from $649,000',
-                },
-                
-                    
+                },     
             ],
-            detailData : [
+        detailData : [
                 {
                     id: 1,
                     uniq: 101,
@@ -125,12 +121,7 @@ const propertyDetail =
                     descriptionP5: "Residents will have access to private world-class amenities including resort podium with a 25m lap pool, gym, yoga deck and kid’s area, zen garden, an outdoor dining/ BBQ and a building adorned with lush green landscape, plus exclusive owners lounge located on level 56.",
             
                 }
-            ],
-            
-            
-            name: '',
-            filter: []
-        
+            ],      
     }
 
 const propertyReducer = (state= propertyDetail , action) => {

@@ -1,12 +1,10 @@
-import { React, useEffect, useState } from 'react';
+import { React, useState } from 'react';
 import '../styles/PrimaryForm.scss';
 import { useForm } from 'react-hook-form';
 
 export default function Form() {
     const [selectedCountry, setSelectedCountry] = useState();
-    // const [isOff, setIsOff] = useState(true);
-    // const [isMobile, setIsMobile] = useState(true);
-    // const [countryId, setCountryId] = useState(null);
+    
 
     const country = [
         {
@@ -81,11 +79,6 @@ export default function Form() {
     ];
 
 
-    
-    // useEffect(() => {
-    //  setIsOff(false);
-    // }, [isOff]);
-   
     const {
         register,
 
@@ -103,12 +96,9 @@ export default function Form() {
         const value = event.target.value;
         setSelectedCountry(value);
 
-        // const index = e.target.selectedIndex;
-        // const el = e.target.childNodes[index];
-        // const option = el.getAttribute('id');
-        // console.log(option);
+        
     };
-    const availableState = State.filter((c) => c.country_id == selectedCountry);
+    const availableState = State.filter((c) => c.country_id.toString() === selectedCountry);
 
     return (
         <div className='primary-form'>

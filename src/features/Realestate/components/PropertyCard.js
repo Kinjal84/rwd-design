@@ -1,19 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
-import { legacy_createStore as createStore } from 'redux';
-import propertyReducer from '../../../redux/reducers/PropertyReducer';
 import '../../Realestate/styles/PropertyCard.scss'
 import '../../../assets/styles/common.scss';
+
 import { FaBed, FaBath, FaCar } from 'react-icons/fa';
 
 const PropertyCard = (props) => {
     
     
     return (
-        <>
-           
+        <>    
             <div className='property-img-details'>
                 <img
                     src={props.img}

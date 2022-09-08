@@ -108,19 +108,23 @@
 
                 justify-content: center;
                 .button{
-                    width: 250px;
-                    height: 50px;
+                    width: 230px;
+                    height: 55px;
                     margin: 15px 0px;
                     border-radius: 30px;
                     border: none;
-                    background: linear-gradient(to top, rgb(90, 58, 8), rgb(241, 161, 40));
-                   
-                    font-size: 20px;
-                    color: white;
+                    background: linear-gradient(to top, rgb(165, 84, 9), rgb(238, 141, 31));
+                //    background-color: rgb(170, 94, 8);
+                    font-size: 22px;
+                    color: black;
+                    
                     cursor: pointer;
                     &:hover{
                         // background: linear-gradient(to bottom, rgb(90, 58, 8), rgb(241, 161, 40));
-                        transform: scale(1.05);
+                        // transform: scale(1.05);
+                        // animation-name: buttonAnimation;
+                        // animation-duration: 4s;
+                        animation: wiggle 2s linear infinite;
                     }
                 }
             }
@@ -128,3 +132,36 @@
         
     }
 }
+
+@keyframes buttonAnimation {
+    from {
+        background: linear-gradient(to right, rgb(90, 58, 8), rgb(241, 161, 40));
+        }
+    to {
+        background: linear-gradient(to left, rgb(90, 58, 8), rgb(241, 161, 40));
+    }    
+} 
+
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }

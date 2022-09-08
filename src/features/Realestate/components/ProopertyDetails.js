@@ -10,12 +10,14 @@ import { SyncLoader, PacmanLoader } from 'react-spinners';
 
 const Property = (props) => {
     
-    // const [filteredResults, setFilteredResults] = useState([]);
+    
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = useState(false);
     const textSelector = useSelector((state) => state);
-    // console.log(textSelector, 'textSelectore')
-
+    
+    
+    const propertyDetails = store.getState();
+    console.log(propertyDetails, "store");
  
     
 
@@ -26,9 +28,6 @@ const Property = (props) => {
         }, 3000);
         
     }, [isLoading])
-    
-    const propertyDetails = store.getState();
-    console.log(propertyDetails, "store");
 
     const searchItems = (e) => {
        
@@ -40,8 +39,7 @@ const Property = (props) => {
                 return Object.values(item.title).join('').toLowerCase().includes(textSelector.name.toLowerCase());
                 
             })
-            // setFilteredResults(textSelector.filter);
-            // console.log(textSelector.filter, "filtered Data")
+            
         }    
         else{
             // setFilteredResults(propertyDetails)

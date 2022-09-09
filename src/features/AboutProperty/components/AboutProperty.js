@@ -53,7 +53,7 @@ const AboutProperty = () => {
         <>
         
         {!isLoading ? <div><HashLoader size={70} color={'orange'} cssOverride={override}/></div> : 
-        <div className='main aboutPage'>
+        <div className='aboutPage'>
             <div className='wrapper'>
 
                 <div className="header-property">

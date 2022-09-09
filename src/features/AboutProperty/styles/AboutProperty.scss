@@ -1,5 +1,6 @@
-.main{
+
     .wrapper{
+        background-color: #dcdddf;
 
         .header-property{
             width: 100%;
@@ -129,22 +130,19 @@
         }
     }
 
-}
+
 
 @media screen and (max-width: 1024px) {
-    .main{
-        .wrapper{
 
-            .property-images{
-                .images-wrapper{
-                    flex-direction: column;
-                    .property-exterior-design{
-                        width: 100%;
-    
-                    }
-                    .inner-design-and-other{
-                        width: 100%;
-                    }
+    .wrapper{
+        .property-images{
+            .images-wrapper{
+                flex-direction: column;
+                .property-exterior-design{
+                    width: 100%;
+                }
+                .inner-design-and-other{
+                    width: 100%;
                 }
             }
         }

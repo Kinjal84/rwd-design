@@ -1,6 +1,12 @@
+:root {
+  --input-border: #fff9da;
+  --input-focus-h: 212;
+  --input-focus-s: 99%;
+  --input-focus-l: 42%;
+}
+
 .formik-form{
     width: 100%;
-    // max-width: 1440px;
     margin: 0 auto;
     background-color: #a9afbf8a;
     .container{
@@ -45,6 +51,22 @@
                            border: none;
                            border-radius: 10px;
                            color: rgb(26, 24, 24);
+                           transition: 180ms box-shadow ease-in-out;
+                           &:focus {
+                            border-color: hsl(
+                              var(--input-focus-h),
+                              var(--input-focus-s),
+                              var(--input-focus-l)
+                            );
+                            box-shadow: 0 0 0 3px
+                            hsla(
+                            var(--input-focus-h),
+                            var(--input-focus-s),
+                            calc(var(--input-focus-l) + 40%),
+                            0.8
+                            );
+                            outline: 3px solid transparent;
+                          }
                         }
                         .placeholder{
                          color: gray !important; 
@@ -105,7 +127,7 @@
                .submit-btn{
                 width: 100%;
                 display: flex;
-
+               
                 justify-content: center;
                 .button{
                     width: 230px;
@@ -114,16 +136,11 @@
                     border-radius: 30px;
                     border: none;
                     background: linear-gradient(to top, rgb(165, 84, 9), rgb(238, 141, 31));
-                //    background-color: rgb(170, 94, 8);
-                    font-size: 22px;
                     color: black;
-                    
+                    font-size: 20px;
                     cursor: pointer;
                     &:hover{
-                        // background: linear-gradient(to bottom, rgb(90, 58, 8), rgb(241, 161, 40));
-                        // transform: scale(1.05);
-                        // animation-name: buttonAnimation;
-                        // animation-duration: 4s;
+                       
                         animation: wiggle 2s linear infinite;
                     }
                 }

@@ -28,6 +28,24 @@ const AboutProperty = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [filterData, setfilteredData] = useState({});
 
+    const {title, 
+        Address, 
+        exteriorPropertyImg, 
+        bedroomImage, 
+        livingRoom, 
+        KitchenDining, 
+        gardenImage,
+        subTitle, 
+        bedcount, 
+        bath, 
+        car, 
+        descriptionP1,
+        descriptionP2,
+        descriptionP3,
+        descriptionP4,
+        descriptionP5, 
+    } = filterData;
+
     const store = createStore(propertyReducer);
     const propertyDetails = store.getState();
   
@@ -58,35 +76,35 @@ const AboutProperty = () => {
 
                 <div className="header-property">
                     <div className='header-wrapper'>
-                        <h1>{filterData.title}</h1>
-                            <p>{filterData.Address}</p>
+                        <h1>{title}</h1>
+                            <p>{Address}</p>
                             </div>
                                 </div>
                                 <div className='property-images' >
                                     <div className='images-wrapper'>
                                         <div className='property-exterior-design'>
-                                            <img className="exterior-image" src={filterData.exteriorPropertyImg} alt="exterior structure of the property"></img>
+                                            <img className="exterior-image" src={exteriorPropertyImg} alt="exterior structure of the property"></img>
                                         </div>
                                         <div className='inner-design-and-other'>
                                             <div className='flex-wrapper-image'>
                                                 <div className='img12-left'>
                                                     <div className='bedroom-img'>
-                                                        <img src={filterData.bedroomImage} alt="bedroom">
+                                                        <img src={bedroomImage} alt="bedroom">
                                                         </img>
                                                     </div>
                                                     <div className='livingroom-img'>
-                                                        <img src={filterData.livingRoom} alt="livingroom">
+                                                        <img src={livingRoom} alt="livingroom">
                                                         </img>
                                                     </div>
 
                                                 </div>
                                                 <div className='img34-left'>
                                                     <div className='kitchen-dining-img'>
-                                                        <img src={filterData.KitchenDining} alt="kitchen-dining">
+                                                        <img src={KitchenDining} alt="kitchen-dining">
                                                         </img>
                                                     </div>
                                                     <div className='garden-img'>
-                                                        <img src={filterData.gardenImage} alt="garden">
+                                                        <img src={gardenImage} alt="garden">
                                                         </img>
                                                     </div>
 
@@ -97,23 +115,23 @@ const AboutProperty = () => {
                                 </div>
                                 <div className='description-section'>
                                     <div className='description-header'>
-                                            <h2 className='title'>{filterData.subTitle}</h2>
+                                            <h2 className='title'>{subTitle}</h2>
                                     </div>
 
                                     <div className='address'>
-                                        <p>{filterData.Address}</p>
+                                        <p>{Address}</p>
                                     </div>
 
                                     <div className='bhk-detail'>
                                     
                                             <div className='property-small-intro'>
-                                                <FaBed className='property-info-icons' />{filterData.bedcount}
+                                                <FaBed className='property-info-icons' />{bedcount}
                                             </div>
                                             <div className='property-small-intro'>
-                                                <FaBath className='property-info-icons' />{filterData.bath}
+                                                <FaBath className='property-info-icons' />{bath}
                                             </div>
                                             <div className='property-small-intro'>
-                                                <FaCar className='property-info-icons' />{filterData.car}
+                                                <FaCar className='property-info-icons' />{car}
                                             </div>
                                     </div>
                                     <div className='home-type'>
@@ -130,11 +148,11 @@ const AboutProperty = () => {
                                             <h3>Now Selling - Register Now</h3>
                                         </div>
                                         <div className='para'>
-                                            <p>{filterData.descriptionP1}</p>
-                                            <p>{filterData.descriptionP2}</p>
-                                            <p>{filterData.descriptionP3}</p>
-                                            <p>{filterData.descriptionP4}</p>
-                                            <p>{filterData.descriptionP5}</p>
+                                            <p>{descriptionP1}</p>
+                                            <p>{descriptionP2}</p>
+                                            <p>{descriptionP3}</p>
+                                            <p>{descriptionP4}</p>
+                                            <p>{descriptionP5}</p>
                                         </div>
                                     </div>
                                 </div>

@@ -1,58 +1,52 @@
 
-     .property-img-details{
-         width: 32%;
-         border: 1px solid lightgray;
-         border-radius: 10px;
-         background-color: white;
-         margin: 15px;
-         &:hover{
-            transform: scale(1.07);
-            background-color: rgb(238, 229, 217);
-            // opacity: 0.6;
-            
+.property-img-details{
+    width: 32%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: white;
+    margin: 15px;
+    &:hover{
+        transform: scale(1.07);
+        background-color: rgb(238, 229, 217);    
+    }
+    img{
+        cursor: pointer;
+        border-radius: 10px 10px 0px 0px;
+    }    
+    .property-info{
+        line-height: 1.7;
+        padding: 10px 15px;
+        .property-name{
+            .link{
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+                &:hover{
+                    color: rgb(235, 106, 47);
+                }
+            }
+        }          
+        .property-address{
+            color: gray;
         }
-            img{
-                cursor: pointer;
-                border-radius: 10px 10px 0px 0px;
-            }
-         
-            .property-info{
-                line-height: 1.7;
-                padding: 10px 15px;
-                .property-name{
-                    .link{
-                        text-decoration: none;
-                        color: black;
-                        font-size: 20px;
-                        &:hover{
-                            color: rgb(235, 106, 47);
-                        }
-                    }
-                }
-                
-                .property-address{
-
-                    color: gray;
-                }
-                .property-info-icons{
-                    color: gray;
-                    margin-right: 5px;
-                }
-                .appartments{
-                    color: gray;
-                    text-align: left;
-                }
-                .property-small-intro{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 10px 10px 10px 0px;
-                }
-            }
-            .bedroom-img{
-                width: 100%;
-                height: 200px;
-            }
-         
+        .property-info-icons{
+            color: gray;
+            margin-right: 5px;
         }
+        .appartments{
+            color: gray;
+            text-align: left;
+        }
+        .property-small-intro{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 10px 10px 0px;
+        }
+    }
+    .bedroom-img{
+        width: 100%;
+        height: 200px;
+    }     
+}
     

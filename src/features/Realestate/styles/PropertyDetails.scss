@@ -1,15 +1,12 @@
 .hero{
     width: 100%;
-    //    max-width: 1440px;
-       margin: 0 auto;
-       background-color: #a9afbf8a;
+    margin: 0 auto;
+    background-color: #a9afbf8a;
     .container{
         padding: 30px;
         max-width: 1750px;
        margin: 0 auto;
-
-        
-        .title-and-search{
+       .title-and-search{
             display: flex;
             justify-content: space-between;
             padding-bottom : 20px;
@@ -26,12 +23,11 @@
                 }
             }
         }
-    .card{
-    width: 100%;
-     display: flex;
-     justify-content: center; 
-   
-    }
+        .card{
+            width: 100%;
+            display: flex;
+            justify-content: center; 
+        }
     }
 }
 

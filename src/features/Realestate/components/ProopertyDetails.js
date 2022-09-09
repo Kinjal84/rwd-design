@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { store } from '../../../redux/reducers/store';
+
+
 import { SyncLoader } from 'react-spinners';
 
 import '../../../assets/styles/common.scss';
@@ -15,9 +16,8 @@ const Property = (props) => {
    
     const dispatch = useDispatch();
     const [isLoading, setIsLoading] = useState(false);
+
     const textSelector = useSelector((state) => state);
-   
-    // const propertyDetails = store.getState();
    
 
     useEffect(() => {
@@ -46,9 +46,8 @@ const Property = (props) => {
                         
                     </div>
                 </div>
-                {
-                    !isLoading ? <div className='override'><SyncLoader size={20} color={'orange'}/></div> :
-                
+            {
+            !isLoading ? <div className='override'><SyncLoader size={20} color={'orange'}/></div> :   
                 <div className='card flex justify--content_space-between'>
                 { textSelector.data.length > 0 && 
                     textSelector.data.map((item, index) => {
@@ -69,11 +68,9 @@ const Property = (props) => {
                             )
                         }
                     })
-                
-
-             }
-                </div>
                 }
+                </div>
+            }
             </div>
         </div>
     );

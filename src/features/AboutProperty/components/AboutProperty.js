@@ -2,9 +2,10 @@ import '../styles/AboutProperty.scss';
 import { FaBath, FaBed, FaCar, FaHouzz} from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import { legacy_createStore as createStore } from 'redux';
-import propertyReducer from '../../../redux/reducers/PropertyReducer';
 import { useEffect, useState } from 'react';
-// import { CSSProperties } from 'react';
+
+
+import propertyReducer from '../../../redux/reducers/PropertyReducer';
 import { HashLoader } from 'react-spinners';
 
 
@@ -26,6 +27,7 @@ const AboutProperty = () => {
  
     const [isLoading, setIsLoading] = useState(true);
     const [filterData, setfilteredData] = useState({});
+
     const store = createStore(propertyReducer);
     const propertyDetails = store.getState();
   
@@ -52,7 +54,7 @@ const AboutProperty = () => {
         
         {!isLoading ? <div><HashLoader size={70} color={'orange'} cssOverride={override}/></div> : 
         <div className='main aboutPage'>
-            <div className='wrapper' key={filterData.id}>
+            <div className='wrapper'>
 
                 <div className="header-property">
                     <div className='header-wrapper'>

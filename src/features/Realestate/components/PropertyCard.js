@@ -19,7 +19,7 @@ const PropertyCard = (props) => {
                 </img>
                 <div className='property-info p--10'>
                     <div className='property-name'>
-                        <Link to={`/propertycard/${props.id}`} className='link'>
+                        <Link to={`/propertyCard/${props.id}`} className='link'>
                             <h4>{props.title}</h4>
                         </Link>
                     </div>

@@ -3,86 +3,13 @@ import "../styles/PrimaryForm.scss";
 import "../styles/FormikForm.scss"
 import { Formik, Form, Field  } from "formik";
 import * as Yup from "yup";
-// import { useState } from "react";
+
+
+import { country } from "../../../shared/constants/constants";
+import { State } from "../../../shared/constants/constants";
 
 const Formikform = () => {
-	// const [selectedCountry, setSelectedCountry] = useState();
-
-	const country = [
-		{
-			id: 1,
-			name: "India",
-		},
-		{
-			id: 2,
-			name: "Usa",
-		},
-		{
-			id: 3,
-			name: "Canada",
-		},
-	];
-	const State = [
-		{
-			id: 1,
-			name: "Delhi",
-			country_id: 1,
-		},
-		{
-			id: 2,
-			name: "Ahemdabad",
-			country_id: 1,
-		},
-		{
-			id: 3,
-			name: "Chennai",
-			country_id: 1,
-		},
-		{
-			id: 4,
-			name: "Texas",
-			country_id: 2,
-		},
-		{
-			id: 5,
-			name: "Alaska",
-			country_id: 2,
-		},
-		{
-			id: 6,
-			name: "Ohio",
-			country_id: 2,
-		},
-		{
-			id: 7,
-			name: "Florida",
-			country_id: 2,
-		},
-		{
-			id: 8,
-			name: "Nova Scotia",
-			country_id: 3,
-		},
-		{
-			id: 9,
-			name: "Nova Scotia",
-			country_id: 3,
-		},
-		{
-			id: 10,
-			name: "Quebec",
-			country_id: 3,
-		},
-		{
-			id: 11,
-			name: "Torento",
-			country_id: 3,
-		},
-	];
-
-    // const availableState = State.filter((c) => c.country_id == selectedCountry);
-// const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
-
+	
 	const ValidationSchema = Yup.object().shape({
 		firstName: Yup.string().min(3, "Too Short!").max(30, "Too Long!").required("First Name is Required!"),
 		lastName: Yup.string().min(3, "Too Short!").max(30, "Too Long!").required("Last Name is Required!"),
@@ -115,7 +42,6 @@ const Formikform = () => {
 					}}
 					validationSchema={ValidationSchema}
 					onSubmit={(values, {resetForm}) => {
-						// same shape as initial values
 						console.log(values);
 						alert("Your data has been recorded");
 						resetForm({values: ''});
@@ -152,13 +78,13 @@ const Formikform = () => {
 										<option className='placeholder' value=''>
 											Select country
 										</option>
-										{country.map((country) => (
+										{country.map((country, index) => (
 											
 											<option
 											
 												value={country.id}
 												id={country.id}
-												key={country.id}>
+												key={index}>
 												{country.name}
 											</option>
 										
@@ -215,13 +141,13 @@ const Formikform = () => {
                                     <option className='placeholder' value=''>
                                         Select state
                                     </option>
-									{State.map((state) => {
+									{State.map((state, index) => {
 										
-										if(state.country_id == values.country){
+										if(state.country_id.toString() === values.country){
 											return (
 											<option
 												value={state.name}
-												key={state.id}>
+												key={index}>
 												{state.name}
 											</option>)
 
@@ -259,12 +185,10 @@ const Formikform = () => {
                                         className='switch'
                                         type="checkbox"
                                         name='mobileNotification'
-										
-                                        
                                     />
 
 								</div>
-                                {/* </div> */}
+                               
 								</div>
 							</div>
 							<div className='submit-btn'>

@@ -1,25 +1,25 @@
-import bedroom from '../../assets/images/Olea/olea-livingroom-1200x550-4.webp';
-import LiveCity from '../../assets/images/LiveCity/1live-city_exterior_cut_1200x550__original.webp';
-import LiveCity2 from '../../assets/images/Victoria/qtva0017_v-a_a-d_gallery_1200x550px_08__original.webp';
+import bedroom from '../../../assets/images/Olea/olea-livingroom-1200x550-4.webp';
+import LiveCity from '../../../assets/images/LiveCity/1live-city_exterior_cut_1200x550__original.webp';
+import LiveCity2 from '../../../assets/images/Victoria/qtva0017_v-a_a-d_gallery_1200x550px_08__original.webp';
 
 
-import exteriorImg from '../../assets/images/Olea/olea-exterior-1200x550-1.webp';
-import bedroomImg from '../../assets/images/Olea/olea-bedroom-v2-1200x550.webp';
-import livingRoomImg from '../../assets/images/Olea/olea-livingroom-1200x550-4.webp';
-import KitchenDiningImg from '../../assets/images/Olea/olea-kitchen-dining-1200x550.webp';
-import gardenImg from '../../assets/images/Olea/olea-garden-new-1200x550.webp';
+import exteriorImg from '../../../assets/images/Olea/olea-exterior-1200x550-1.webp';
+import bedroomImg from '../../../assets/images/Olea/olea-bedroom-v2-1200x550.webp';
+import livingRoomImg from '../../../assets/images/Olea/olea-livingroom-1200x550-4.webp'
+import KitchenDiningImg from '../../../assets/images/Olea/olea-kitchen-dining-1200x550.webp';
+import gardenImg from '../../../assets/images/Olea/olea-garden-new-1200x550.webp';
 
-import exteriorImg2 from '../../assets/images/LiveCity/1live-city_exterior_cut_1200x550__original.webp';
-import bedroomImg2 from '../../assets/images/LiveCity/live-city_bedroom_1200x550__original.webp';
-import livingRoomImg2 from '../../assets/images/LiveCity/live-city_livingroom_window_1200x550__original.webp';
-import KitchenDiningImg2 from '../../assets/images/LiveCity/live-city_kitchen_1200x550__original.webp';
-import gardenImg2 from '../../assets/images/LiveCity/live-city_map_1200x550__original.webp';
+import exteriorImg2 from '../../../assets/images/LiveCity/1live-city_exterior_cut_1200x550__original.webp';
+import bedroomImg2 from '../../../assets/images/LiveCity/live-city_bedroom_1200x550__original.webp';
+import livingRoomImg2 from '../../../assets/images/LiveCity/live-city_livingroom_window_1200x550__original.webp';
+import KitchenDiningImg2 from '../../../assets/images/LiveCity/live-city_kitchen_1200x550__original.webp';
+import gardenImg2 from '../../../assets/images/LiveCity/live-city_map_1200x550__original.webp';
 
-import exteriorImg3 from '../../assets/images/Victoria/qtva0017_v-a_a-d_gallery_1200x550px_05__original.webp';
-import bedroomImg3 from '../../assets/images/Victoria/qtva0017_v-a_a-d_gallery_1200x550px_08__original.webp';
-import livingRoomImg3 from '../../assets/images/Victoria/v-a_albert_ad_1200x550_skylounge_1__original.webp';
-import KitchenDiningImg3 from '../../assets/images/Victoria/v-a_albert_ad_1200x550_residences_dining__original.webp';
-import gardenImg3 from '../../assets/images/Victoria/v-a_albert_ad_1200x550_residences_terrace__original.webp';
+import exteriorImg3 from '../../../assets/images/Victoria/qtva0017_v-a_a-d_gallery_1200x550px_05__original.webp';
+import bedroomImg3 from '../../../assets/images/Victoria/qtva0017_v-a_a-d_gallery_1200x550px_08__original.webp';
+import livingRoomImg3 from '../../../assets/images/Victoria/v-a_albert_ad_1200x550_skylounge_1__original.webp';
+import KitchenDiningImg3 from '../../../assets/images/Victoria/v-a_albert_ad_1200x550_residences_dining__original.webp';
+import gardenImg3 from '../../../assets/images/Victoria/v-a_albert_ad_1200x550_residences_terrace__original.webp';
 
 
 const propertyDetail = 
@@ -76,8 +76,6 @@ const propertyDetail =
                     descriptionP3: "Olea Homes anchor the building to its neighbourhood, with separate entries emulating free-standing residences, further enhanced by the brick facades common to the area’s traditional homes. The beauty of Olea Homes lies in its honest, complementary relationship with the streets and houses that surround it. It brings you into the neighbourhood, and makes it easy to fall in love with the style, quality and sheer liveability of your home.",
                     descriptionP4: "Considering Caulfield’s fame as one of Australia’s premier racing venues, the area itself has evolved in its own way. It has excellent access to public transport and roads, putting you at the centre of Melbourne’s best - from parks and reserves, beaches, shopping and retail, education and everyday amenities and services.",
                     descriptionP5: "Moments from fabulous Caulfield Park and Caulfield Racecourse, Olea prides itself on presenting a life that is rich in style and comfort, atmosphere and opportunity. With a community of like-minded residents enjoying the landscaped shared spaces, and a larger community to be found in the suburb itself, it really will feel like coming home. Discover what life can be at Olea.",
-            
-            
                 },
                 {
                     id: 2,

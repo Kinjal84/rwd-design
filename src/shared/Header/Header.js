@@ -93,7 +93,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className={`sidebar ${isOpen == true ? 'active' : ''}`}>
+            <div className={`sidebar ${isOpen === true ? 'active' : ''}`}>
                 <div className='inner-header'>
                     <div className='btn btn-primary' onClick={ToggleSidebar}>
                         <FaTimes

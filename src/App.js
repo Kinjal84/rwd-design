@@ -1,7 +1,7 @@
 
-import Main from './features/main/Main';
+import Main from './features/Realestate/components/Main';
 import { Route, Routes } from 'react-router';
-import AboutProperty from './features/AboutProperty/components/AboutProperty';
+import AboutProperty from './features/Realestate/components/AboutProperty';
 
 function App() {
     return (

@@ -1,9 +1,9 @@
 
-import Header from '../../shared/Header/Header';
-import Property from '../Realestate/components/ProopertyDetails';
-import Formikform from '../Form/components/FormikForm';
+import Header from '../../../shared/Header/Header';
+import Property from '../components/ProopertyDetails';
+import Formikform from './FormikForm';
 import { Provider } from 'react-redux';
-import { store } from '../redux/store';
+import { store } from '../store/store';
 
 
 function Main() {

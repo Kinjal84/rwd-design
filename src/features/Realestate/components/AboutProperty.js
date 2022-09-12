@@ -5,7 +5,7 @@ import { legacy_createStore as createStore } from 'redux';
 import { useEffect, useState } from 'react';
 
 
-import propertyReducer from '../../redux/reducers/PropertyReducer';
+import propertyReducer from '../store/PropertyReducer';
 import { HashLoader } from 'react-spinners';
 
 

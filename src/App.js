@@ -10,6 +10,7 @@ function App() {
             <Routes >
                 <Route path="/" element={<Main />} />
                 <Route path="/propertyCard/:id" element={<AboutProperty />} />
+               
             </Routes>
         </div>
     );

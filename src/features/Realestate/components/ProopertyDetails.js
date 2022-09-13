@@ -43,7 +43,6 @@ const Property = (props) => {
                     <h3>Australia's best investment property deals</h3>
                     <div className='search'>
                         <input type="text" className='search-input' placeholder="search here..." value={ textSelector.name } onChange={searchItems} />
-                        
                     </div>
                 </div>
             {
